@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Mới Môn Học</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Modal */
+        .modal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(218, 218, 218, 0.5); /* Nền mờ */
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 700px;
+            height: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Tiêu đề Modal */
+        .modal h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Các label trong form */
+        .modal label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* Các input và select trong form */
+        .modal input,
+        .modal select {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Các nút trong modal */
+        .modal button {
+            padding: 10px 20px;
+            background-color: rgb(66, 106, 249);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .modal button:hover {
+            background-color: rgb(1, 83, 206);
+        }
+
+        .modal .cancel-btn {
+            background-color: #ccc;
+            margin-right: 10px;
+        }
+
+        .modal .cancel-btn:hover {
+            background-color: #999;
+        }
+
+        /* Định dạng cho phần trạng thái */
+        .radio-group {
+            display: flex;
+            
+        }
+
+        .radio-group input {
+            margin-right: 10px;
+        }
+        .hoatDong{
+            display: flex;
+        }
+        .hoatDong input{
+            width: 15px;
+            margin-top: 10px;
+
+        }
+        .hoatDong label{
+            margin-top: 26px;
+        }
+
+        .ngungHoatDong{
+            margin-left: 30px;
+            display: flex;
+        }
+        .ngungHoatDong input{
+            
+            width: 15px;
+            margin-top: 10px;
+
+        }
+        .ngungHoatDong label{
+            margin-top: 26px;
+        }
+        .btn-add-cancel{
+            
+            display: flex;
+            margin-top: 10px;
+            margin-left: 490px;
+        }
+        .cancel-btn{
+            margin-left: 10px;
+        }
+        .text-trangThai{
+            margin-top: 20px;
+        }
+        .name-monhoc{
+            display: flex;
+            justify-content: space-between;
+        }
+        .fa-x{
+            margin-top: 5px;
+            margin-right: 8px;
+            font-size: 20px;
+        }
+        .fa-x:hover{
+            color: rgb(220, 18, 18);
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-content">
+
+            <div class="name-monhoc">
+                <h2>Thêm Mới Môn Học</h2>
+                <i class="fa-solid fa-x"></i>
+            </div>
+
+            <form action="#" method="POST">
+                    <label for="tenMonHoc">Tên môn học</label>
+                <input type="text" id="tenMonHoc" name="tenMonHoc" placeholder="Nhập tên môn học" required>
+
+                <label for="trangThai" class="text-trangThai">Trạng thái</label>
+
+
+                <div class="radio-group">
+                        <div class="hoatDong">
+                            <input type="radio" name="trangThai" value="Dang hoat dong" checked> 
+                            <label for="">Đang hoạt động</label>
+                        </div>
+                  
+                        <div class="ngungHoatDong">
+                            <input type="radio" name="trangThai" value="Dang hoat dong" checked> 
+                            <label for="">Ngừng hoạt động</label>
+                        </div>
+                    
+                </div>
+
+                <div class="btn-add-cancel">
+                    <button type="submit" class="">Thêm</button>
+                    <button type="button" class="cancel-btn">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
