@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.khung {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 560px;
+}
+
+.tieu-de {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.mo-ta {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 24px;
+}
+
+form label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: #374151;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.hang-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.input-nho {
+    flex: 1;
+}
+
+.dong-y {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.dong-y input {
+    margin-right: 8px;
+}
+
+.dong-y a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.da-co-tk {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.da-co-tk a {
+    color: #2563eb;
+    text-decoration: none;
+}

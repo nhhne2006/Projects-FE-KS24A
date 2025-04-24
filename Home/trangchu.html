@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh điều hướng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="trangchu.css">
+
+</head>
+
+<body>
+
+    <div class="thead">
+        <input type="text" placeholder="Tìm kiếm" class="timkiem" />
+        <div class="menu">
+            <label>Trang chủ</label>
+            <label>Môn học</label>
+            <label>Bài học</label>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </div>
+
+    <div class="tbody">
+        <div class="luaChon-monhoc">
+            <label for="" class="allMonHoc">Tất cả các môn học</label>
+            <label for="">Đã hoàn thành</label>
+            <label for="">Chưa hoàn thành</label>
+        </div>
+
+        <div class="container">
+            <div class="course">
+                <h3>HTML cơ bản</h3>
+                <ul>
+                    <li><input type="checkbox" id="session1"><label for="session1">Session 01: Tổng quan về HTML</label></li>
+                    <li><input type="checkbox" id="session2"><label for="session2">Session 02: Thẻ Inline và Block</label></li>
+                    <li><input type="checkbox" id="session3"><label for="session3">Session 03: Thẻ hình ảnh</label></li>
+                    <li><input type="checkbox" id="session4"><label for="session4">Session 04: Thẻ chuyển trang</label></li>
+                    <li><input type="checkbox" id="session5"><label for="session5">Session 05: Thẻ Semantic</label></li>
+                </ul>
+                <a href="#">Xem thêm</a>
+            </div>
+
+            <div class="course">
+                <h3>CSS cơ bản</h3>
+                <ul>
+                    <li><input type="checkbox" id="session6"><label for="session6">Session 01: Tổng quan về CSS</label></li>
+                    <li><input type="checkbox" id="session7"><label for="session7">Session 02: Nhúng CSS vào trang Web</label></li>
+                    <li><input type="checkbox" id="session8"><label for="session8">Session 03: Position</label></li>
+                    <li><input type="checkbox" id="session9"><label for="session9">Session 04: Flexbox</label></li>
+                    <li><input type="checkbox" id="session10"><label for="session10">Session 05: Animation</label></li>
+                </ul>
+                <a href="#">Xem thêm</a>
+            </div>
+
+            <div class="course">
+                <h3>JavaScript cơ bản</h3>
+                <ul>
+                    <li><input type="checkbox" id="session11"><label for="session11">Session 01: Tổng quan ngôn ngữ JavaScript</label></li>
+                    <li><input type="checkbox" id="session12"><label for="session12">Session 02: Khai báo biến</label></li>
+                    <li><input type="checkbox" id="session13"><label for="session13">Session 03: Câu lệnh điều kiện</label></li>
+                    <li><input type="checkbox" id="session14"><label for="session14">Session 04: Vòng lặp</label></li>
+                    <li><input type="checkbox" id="session15"><label for="session15">Session 05: Mảng</label></li>
+                </ul>
+                <a href="#">Xem thêm</a>
+            </div>
+
+            <div class="course">
+                <h3>Lập trình với React.js</h3>
+                <ul>
+                    <li><input type="checkbox" id="session16"><label for="session16">Session 01: Tổng quan về React.js</label></li>
+                    <li><input type="checkbox" id="session17"><label for="session17">Session 02: Props, State, Event</label></li>
+                    <li><input type="checkbox" id="session18"><label for="session18">Session 03: React hook</label></li>
+                    <li><input type="checkbox" id="session19"><label for="session19">Session 04: UI Framework</label></li>
+                    <li><input type="checkbox" id="session20"><label for="session20">Session 05: React Router</label></li>
+                </ul>
+                <a href="#">Xem thêm</a>
+            </div>
+
+            <div class="course">
+                <h3>Lập trình với Java</h3>
+                <ul>
+                    <li><input type="checkbox" id="session21"><label for="session21">Session 01: Tổng quan về ngôn ngữJava</label></li>
+                    <li><input type="checkbox" id="session22"><label for="session22">Session 02: Khai báo biến</label></li>
+                    <li><input type="checkbox" id="session23"><label for="session23">Session 03: Câu lệnh điềukiện</label></li>
+                    <li><input type="checkbox" id="session24"><label for="session24">Session 04: Vòng lặp</label></li>
+                    <li><input type="checkbox" id="session25"><label for="session25">Session 05: Mảng</label></li>
+                </ul>
+                <a href="#">Xem thêm</a>
+            </div>
+
+            <div class="course">
+                <h3>Lập trình C</h3>
+                <ul class="lapTrinhC">
+                    <li>Chưa có bài học nào</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <!-- Phần bên trái: Giới thiệu và icon mạng xã hội -->
+            <div class="footer-left">
+                <p>Chúng tôi cung cấp giải pháp học tập, giúp học sinh và <p> viên học tập tốt hơn và hiệu quả hơn.</p></p>
+                <div class="icon">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-tiktok"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+    
+            <!-- Phần giữa: Danh mục -->
+            <div class="footer-center">
+                <h3>Danh mục</h3>
+                <ul>
+                    <li><a href="#">Môn học</a></li>
+                    <li><a href="#">Bài học</a></li>
+                    <li><a href="#">Ghi chú</a></li>
+                </ul>
+            </div>
+    
+            <!-- Phần bên phải: Hỗ trợ khách hàng -->
+            <div class="footer-right">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="#">Tìm kiếm dịch vụ</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Chính sách và điều khoản</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
