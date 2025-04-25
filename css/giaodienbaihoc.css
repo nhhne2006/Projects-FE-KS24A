@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.quanLy {
+    background-color: rgb(243, 243, 243);
+    width: 17%;
+    height: 900px;
+    padding: 20px;
+    border-right: 1px solid rgb(181, 181, 181);
+}
+
+/* nhóm 1 */
+.box-one {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.text-one {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.book {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon-container img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.icon-container label {
+    font-size: 16px;
+}
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.links label {
+    margin: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+.links label:hover {
+    color: #007bff;
+}
+
+.icon-monhoc {
+    margin-left: 4px;
+    color: rgb(133, 133, 133);
+    margin-right: 15px;
+}
+
+/* nhóm box 2 */
+.box-two {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    /* Căn đều các phần tử trong box */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    position: absolute;
+    top: 0;
+    width: 83%;
+    margin-left: 287px;
+    border-bottom: 1px solid rgb(181, 181, 181);
+}
+
+.box-two div {
+    display: flex;
+    align-items: center;
+    /* Căn giữa các biểu tượng trong mỗi div */
+}
+
+.box-two img {
+    margin-right: 15px;
+    /* Khoảng cách giữa các ảnh */
+    width: 40px;
+    /* Đảm bảo kích thước ảnh đồng đều */
+    height: 40px;
+    /* Đảm bảo kích thước ảnh đồng đều */
+}
+
+.icon-menu {
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icon-all {
+    margin-right: 30px;
+}
+
+.avata {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+/* box nhóm 3 */
+.box-three {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    margin-left: 287px;
+    margin-top: -839px;
+    width: 83%;
+    height: 840px;
+}
+
+.text-two {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.chucNang {
+    display: flex;
+    margin-top: 33px;
+
+}
+
+.trangThai {
+    width: 220px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 20px;
+
+}
+
+.btn-add {
+    width: 170px;
+    height: 40px;
+    background-color: rgb(66, 106, 249);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.btn-add:hover {
+    background-color: rgb(1, 83, 206);
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.timKiem {
+    width: 310px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid rgb(192, 192, 192);
+    margin-left: 1063px;
+    margin-top: 10px;
+
+}
+
+
+/* Table */
+table {
+    width: 97%;
+    margin-left: 30px;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    height: 50px;
+    background-color: #f2f2f2;
+}
+
+td {
+    height: 70px;
+}
+
+.status-active {
+    background-color: aquamarine;
+    border-radius: 10px;
+    color: green;
+}
+
+.status-inactive {
+    background-color: #fcd8db;
+    border-radius: 10px;
+    color: red;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.edit {
+    background-color: #ffc107;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button.delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button.edit:hover {
+    background-color: #e0a800;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+}
+
+table td button {
+    margin-left: 10px;
+}
+
+.fa-trash-can {
+    color: #ff5667;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.fa-trash-can:hover {
+    color: #c82333;
+    cursor: pointer;
+}
+
+.fa-pen {
+    color: #ffd34e;
+
+}
+
+.fa-pen:hover {
+    color: #b78900;
+    cursor: pointer;
+}
+
+.modal-body label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.modal-body input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.modal-add label{
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.modal-add input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.modal-content{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 750px;
+    box-shadow: 0 4px 8px rgba(227, 227, 227, 0.2);
+}
+.justify-content-end{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: -70px;
+
+}

@@ -40,6 +40,15 @@ body {
     cursor: pointer;
     font-size: 19px;
 }
+.lession{
+    color: rgb(181, 181, 181);
+    cursor: pointer;
+    font-size: 19px;
+    text-decoration: none;
+}
+.lession:hover{
+    color: black;
+}
 
 .menu label:hover {
     color: black;
@@ -48,6 +57,10 @@ body {
 .menu i {
     font-size: 20px;
     cursor: pointer;
+}
+
+.fa-user:hover{
+    color: red;
 }
 
 
