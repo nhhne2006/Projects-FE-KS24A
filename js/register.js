@@ -2,32 +2,29 @@ let errorHo = document.getElementById('error-ho');
 let errorTen = document.getElementById('error-ten');
 let errorEmail = document.getElementById('error-email');
 let errorPass = document.getElementById('error-pass');
+let verifyPass = document.getElementById('verify-pass');
+let errorCheckbox = document.getElementById('error-checkbox');
 let btn = document.getElementById("dangky-btn");
 let checkbox = document.getElementById('checkbox');
 
-// Ban đầu, vô hiệu hóa nút Đăng ký
-btn.disabled = true; 
-
-// Theo dõi sự thay đổi trạng thái của checkbox
-checkbox.addEventListener('click', () => {
-    // Nếu checkbox được tick, bật nút Đăng ký
-    btn.disabled = false; // Nếu không được chọn, nút Đăng ký sẽ bị tắt
-});
-
 // Khi nhấn nút Đăng ký
 btn.addEventListener("click", (event) => {
+
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
     let ho = document.getElementById('ho').value;
     let ten = document.getElementById('ten').value;
     let email = document.getElementById('email').value;
     let pass = document.getElementById('password').value;
+    let confirmPass = document.getElementById('password-confirm').value;
 
     // Xóa thông báo lỗi cũ
     errorHo.textContent = "";
     errorTen.textContent = "";
     errorEmail.textContent = "";
     errorPass.textContent = "";
+    verifyPass.textContent = "";
+    errorCheckbox.textContent = "";
 
     let emailRegex = /^[^@]{2,64}@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,63}$/;
     let check = true;
@@ -51,6 +48,13 @@ btn.addEventListener("click", (event) => {
     } else if (!email.match(emailRegex)) {
         errorEmail.textContent = "Email không đúng định dạng";
         check = false;
+    } else {
+        // Kiểm tra email có trùng không
+        let emailExists = users.some(user => user.email === email);
+        if (emailExists) {
+            errorEmail.textContent = "Email đã được đăng ký!";
+            check = false;
+        }
     }
 
     // Kiểm tra mật khẩu
@@ -59,6 +63,21 @@ btn.addEventListener("click", (event) => {
         check = false;
     } else if (pass.length < 8) {
         errorPass.textContent = "Mật khẩu ít nhất có 8 ký tự";
+        check = false;
+    }
+
+    // Kiểm tra mật khẩu xác nhận
+    if (!confirmPass) {
+        verifyPass.textContent = "Vui lòng nhập lại mật khẩu";
+        check = false;
+    } else if (confirmPass !== pass) {
+        verifyPass.textContent = "Mật khẩu xác nhận không khớp";
+        check = false;
+    }
+
+    // Kiểm tra checkbox
+    if (!checkbox.checked) {
+        errorCheckbox.textContent = "Vui lòng xác nhận với chính sách và điều khoản";
         check = false;
     }
 
@@ -73,6 +92,7 @@ btn.addEventListener("click", (event) => {
 
         users.push(newUser);
         localStorage.setItem("users", JSON.stringify(users));
+        console.log("Người dùng đã được lưu vào localStorage:", users);
         alert("Đăng ký thành công");
         location.href = "login.html";
     }

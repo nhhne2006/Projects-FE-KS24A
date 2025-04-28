@@ -35,9 +35,14 @@
       <input type="password" id="password" placeholder="">
       <label for="password" id="error-pass" class="loi"></label>
 
+      <label for="password-confirm">Vui lòng nhập lại mật khẩu</label> <!-- Cập nhật for -->
+      <input type="password" id="password-confirm" placeholder="">
+      <label for="password-confirm" id="verify-pass" class="loi"></label> <!-- Cập nhật for và id -->
+
       <div class="dong-y">
         <input type="checkbox" id="checkbox">
         <label for="checkbox">Tôi đồng ý với <a href="#">chính sách và điều khoản</a></label>
+        <label for="checkbox" id="error-checkbox" class="loi"></label> <!-- Thêm label cho thông báo lỗi checkbox -->
       </div>
 
       <button type="button" id="dangky-btn">Đăng ký</button>
