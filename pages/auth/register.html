@@ -1,52 +1,52 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đăng ký</title>
+  <title>Register</title>
   <link rel="stylesheet" href="/css/register.css">
 </head>
 
 <body>
-  <div class="khung">
-    <h2 class="tieu-de">Đăng ký tài khoản</h2>
-    <p class="mo-ta">Đăng ký tài khoản để sử dụng dịch vụ</p>
+  <div class="form-container">
+    <h2 class="title">Đăng ký tài khoản</h2>
+    <p class="description">Đăng ký tài khoản để sử dụng dịch vụ</p>
 
     <form>
-      <div class="hang-input">
-        <div class="input-nho">
-          <label for="ho">Họ và tên đệm</label>
-          <input type="text" id="ho" placeholder="">
-          <label for="ho" id="error-ho" class="loi"></label>
+      <div class="input-group">
+        <div class="input-small">
+          <label for="first-name">Họ và tên đệm</label>
+          <input type="text" id="first-name" placeholder="">
+          <label for="first-name" id="error-first-name" class="error-message"></label>
         </div>
-        <div class="input-nho">
-          <label for="ten">Tên</label>
-          <input type="text" id="ten" placeholder="">
-          <label for="ten" id="error-ten" class="loi"></label>
+        <div class="input-small">
+          <label for="last-name">Tên</label>
+          <input type="text" id="last-name" placeholder="">
+          <label for="last-name" id="error-last-name" class="error-message"></label>
         </div>
       </div>
 
       <label for="email">Email</label>
       <input type="email" id="email" placeholder="you@company.com">
-      <label for="email" id="error-email" class="loi"></label>
+      <label for="email" id="error-email" class="error-message"></label>
 
       <label for="password">Mật khẩu</label>
       <input type="password" id="password" placeholder="">
-      <label for="password" id="error-pass" class="loi"></label>
+      <label for="password" id="error-password" class="error-message"></label>
 
-      <label for="password-confirm">Vui lòng nhập lại mật khẩu</label> <!-- Cập nhật for -->
+      <label for="password-confirm">Vui lòng nhập lại mật khẩu</label>
       <input type="password" id="password-confirm" placeholder="">
-      <label for="password-confirm" id="verify-pass" class="loi"></label> <!-- Cập nhật for và id -->
+      <label for="password-confirm" id="error-confirm-password" class="error-message"></label>
 
-      <div class="dong-y">
+      <div class="agreement">
         <input type="checkbox" id="checkbox">
         <label for="checkbox">Tôi đồng ý với <a href="#">chính sách và điều khoản</a></label>
-        <label for="checkbox" id="error-checkbox" class="loi"></label> <!-- Thêm label cho thông báo lỗi checkbox -->
+        <label for="checkbox" id="error-checkbox" class="error-message"></label>
       </div>
 
-      <button type="button" id="dangky-btn">Đăng ký</button>
-      <p class="da-co-tk">Bạn đã có tài khoản? <a href="../auth/login.html">Đăng nhập</a></p>
+      <button type="button" id="register-button">Đăng ký</button>
+      <p class="existing-account">Bạn đã có tài khoản? <a href="../auth/login.html">Đăng nhập</a></p>
     </form>
   </div>
   <script src="/js/fake-data.js"></script>

@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 10x0vh;
     margin: 0;
 }
 
@@ -13,7 +13,7 @@ body {
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    width: 360px;
+    width: 460px;
     text-align: center;
 }
 
@@ -34,7 +34,7 @@ form {
 label {
     display: block;
     margin-bottom: 6px;
-    font-weight: 500;
+
 }
 
 input[type="email"],
@@ -74,4 +74,9 @@ button:hover {
 .register-link {
     margin-top: 16px;
     font-size: 14px;
+}
+
+.loi {
+    color: red;
+    font-weight: normal;
 }

@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="/css/login.css">
-
 </head>
-
 <body>
-    <!DOCTYPE html>
-    <html lang="vi">
+    <div class="login-container">
+        <h1>Đăng nhập</h1>
+        <p>Đăng nhập tài khoản để sử dụng hệ thống quản lý.</p>
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email">
+            <label for="email" id="error-email" class="loi"></label>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Đăng nhập</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" placeholder="Mật khẩu">
+            <label for="password" id="error-pass" class="loi"></label>
 
-    <body>
-        <div class="login-container">
-            <h1>Đăng nhập</h1>
-            <p>Đăng nhập tài khoản để sử dụng hệ thống quản lý.</p>
-            <form>
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email" required>
+            <div class="form-options">
+                <label>
+                    <input type="checkbox" id="checkBox"> Nhớ tài khoản
+                </label>
+                <a href="#">Quên mật khẩu?</a>
+            </div>
 
-                <label for="password">Mật khẩu</label>
-                <input type="password" id="password" placeholder="Mật khẩu" required>
-
-                <div class="form-options">
-                    <label>
-                        <input type="checkbox"> Nhớ tài khoản
-                    </label>
-                    <a href="#">Quên mật khẩu?</a>
-                </div>
-
-                <button type="submit"  id="dangnhap-btn" >Đăng nhập</button>
-            </form>
-            <p class="register-link">Bạn chưa có tài khoản? <a href="../auth/register.html">Đăng ký</a></p>
-        </div>
-    </body>
-
-    </html>
-
+            <button type="button" id="login-btn">Đăng nhập</button>
+        </form>
+        <p class="register-link">Bạn chưa có tài khoản? <a href="../auth/register.html">Đăng ký</a></p>
+    </div>
+    <script src="/js/login.js"></script>
+    <script src="/js/fake-data.js"></script>
 </body>
-
 </html>

@@ -413,16 +413,18 @@
                     <td>Lập trình C</td>
                     <td><span class="status-active"> • Đang hoạt động</span></td>
                     <td>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash-can" data-bs-toggle="modal"
+                            data-bs-target="#modalDeleteLession"></i>
+                        <i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#modalEditLession"></i>
                     </td>
                 </tr>
                 <tr>
                     <td>Lập trình Frontend với ReactJS</td>
                     <td><span class="status-inactive"> • Ngừng hoạt động</span></td>
                     <td>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash-can" data-bs-toggle="modal"
+                            data-bs-target="#modalDeleteLession"></i>
+                        <i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#modalEditLession"></i>
                     </td>
                 </tr>
                 <tr>
@@ -474,12 +476,12 @@
 
 
     <!-- Modal xóa bài học -->
-    <div class="modal fade" id="modalDeleteLession" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="modalConfirmDelete" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Xóa bài học</h1>
+                    <h1 class="modal-title fs-5" id="modalConfirmDeleteLabel">Xóa bài học</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -488,12 +490,32 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Có</button>
+                    <button type="button" class="btn btn-primary" id="confirmDeleteBtn">Có</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
                 </div>
             </div>
         </div>
     </div>
+
+        <!-- Modal Xác Nhận Xóa
+<div class="modal fade" id="modalConfirmDelete" tabindex="-1" aria-labelledby="modalConfirmDeleteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalConfirmDeleteLabel">Xác nhận xóa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xóa bài học này không?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Có</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
 
 
 
@@ -528,9 +550,12 @@
     </div>
 
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+        <script src="../js/subject-manager.js"></script>
 </body>
 
 </html>

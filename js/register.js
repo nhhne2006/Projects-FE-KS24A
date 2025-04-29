@@ -1,47 +1,48 @@
-let errorHo = document.getElementById('error-ho');
-let errorTen = document.getElementById('error-ten');
+let errorFirstName = document.getElementById('error-first-name');
+let errorLastName = document.getElementById('error-last-name');
 let errorEmail = document.getElementById('error-email');
-let errorPass = document.getElementById('error-pass');
-let verifyPass = document.getElementById('verify-pass');
+let errorPassword = document.getElementById('error-password');
+let errorConfirmPassword = document.getElementById('error-confirm-password');
 let errorCheckbox = document.getElementById('error-checkbox');
-let btn = document.getElementById("dangky-btn");
+let registerButton = document.getElementById("register-button");
 let checkbox = document.getElementById('checkbox');
 
 // Khi nhấn nút Đăng ký
-btn.addEventListener("click", (event) => {
+registerButton.addEventListener("click", () => {
+    // Lấy dữ liệu nếu có dữ liệu thì truy xuất đến users
+    const data = JSON.parse(localStorage.getItem("data"));
+    const users = data ? data.users : [];
 
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-
-    let ho = document.getElementById('ho').value;
-    let ten = document.getElementById('ten').value;
+    let firstName = document.getElementById('first-name').value;
+    let lastName = document.getElementById('last-name').value;
     let email = document.getElementById('email').value;
-    let pass = document.getElementById('password').value;
-    let confirmPass = document.getElementById('password-confirm').value;
+    let password = document.getElementById('password').value;
+    let confirmPassword = document.getElementById('password-confirm').value;
 
     // Xóa thông báo lỗi cũ
-    errorHo.textContent = "";
-    errorTen.textContent = "";
+    errorFirstName.textContent = "";
+    errorLastName.textContent = "";
     errorEmail.textContent = "";
-    errorPass.textContent = "";
-    verifyPass.textContent = "";
+    errorPassword.textContent = "";
+    errorConfirmPassword.textContent = "";
     errorCheckbox.textContent = "";
 
     let emailRegex = /^[^@]{2,64}@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,63}$/;
     let check = true;
 
-    // Kiểm tra họ
-    if (!ho) {
-        errorHo.textContent = "Họ và tên đệm không được để trống";
+    // Kiểm tra First Name
+    if (!firstName) {
+        errorFirstName.textContent = "Họ và tên lót không được để trống";
         check = false;
     }
 
-    // Kiểm tra tên
-    if (!ten) {
-        errorTen.textContent = "Tên không được để trống";
+    // Kiểm tra Last Name
+    if (!lastName) {
+        errorLastName.textContent = "Tên không được để trống";
         check = false;
     }
 
-    // Kiểm tra email
+    // Kiểm tra Email
     if (!email) {
         errorEmail.textContent = "Email không được để trống";
         check = false;
@@ -52,32 +53,32 @@ btn.addEventListener("click", (event) => {
         // Kiểm tra email có trùng không
         let emailExists = users.some(user => user.email === email);
         if (emailExists) {
-            errorEmail.textContent = "Email đã được đăng ký!";
+            errorEmail.textContent = "Email đã tồn tại";
             check = false;
         }
     }
 
-    // Kiểm tra mật khẩu
-    if (!pass) {
-        errorPass.textContent = "Mật khẩu không được để trống";
+    // Kiểm tra Password
+    if (!password) {
+        errorPassword.textContent = "Mật khẩu không được để trống";
         check = false;
-    } else if (pass.length < 8) {
-        errorPass.textContent = "Mật khẩu ít nhất có 8 ký tự";
-        check = false;
-    }
-
-    // Kiểm tra mật khẩu xác nhận
-    if (!confirmPass) {
-        verifyPass.textContent = "Vui lòng nhập lại mật khẩu";
-        check = false;
-    } else if (confirmPass !== pass) {
-        verifyPass.textContent = "Mật khẩu xác nhận không khớp";
+    } else if (password.length < 8) {
+        errorPassword.textContent = "Mật khẩu có ít nhất có 8 ký tự";
         check = false;
     }
 
-    // Kiểm tra checkbox
+    // Kiểm tra Confirm Password
+    if (!confirmPassword) {
+        errorConfirmPassword.textContent = "Mật khẩu xác nhận không được để trống";
+        check = false;
+    } else if (confirmPassword !== password) {
+        errorConfirmPassword.textContent = "Mật khẩu xác nhận không khớp";
+        check = false;
+    }
+
+    // Kiểm tra Checkbox
     if (!checkbox.checked) {
-        errorCheckbox.textContent = "Vui lòng xác nhận với chính sách và điều khoản";
+        errorCheckbox.textContent = "Vui lòng xác nhận";
         check = false;
     }
 
@@ -85,14 +86,15 @@ btn.addEventListener("click", (event) => {
     if (check) {
         let newUser = {
             id: users.length > 0 ? Math.max(...users.map(x => x.id)) + 1 : 1,
-            username: ten,
-            email: email,
-            password: pass
+            first_name: firstName,
+            last_name: lastName,
+            email,
+            password,
         };
 
         users.push(newUser);
-        localStorage.setItem("users", JSON.stringify(users));
-        console.log("Người dùng đã được lưu vào localStorage:", users);
+        data.users = users;
+        localStorage.setItem("data", JSON.stringify(data));
         alert("Đăng ký thành công");
         location.href = "login.html";
     }

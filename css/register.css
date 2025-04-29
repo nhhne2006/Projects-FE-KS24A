@@ -13,7 +13,7 @@ body {
     height: 100vh;
 }
 
-.khung {
+.form-container {
     background-color: #fff;
     padding: 40px 30px;
     border-radius: 10px;
@@ -21,14 +21,14 @@ body {
     width: 560px;
 }
 
-.tieu-de {
+.title {
     text-align: center;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 8px;
 }
 
-.mo-ta {
+.description {
     text-align: center;
     font-size: 14px;
     color: #6b7280;
@@ -53,29 +53,29 @@ input[type="password"] {
     font-size: 14px;
 }
 
-.hang-input {
+.input-group {
     display: flex;
     justify-content: space-between;
     gap: 10px;
     margin-bottom: 16px;
 }
 
-.input-nho {
+.input-small {
     flex: 1;
 }
 
-.dong-y {
+.agreement {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     font-size: 13px;
 }
 
-.dong-y input {
+.agreement input {
     margin-right: 8px;
 }
 
-.dong-y a {
+.agreement a {
     color: #2563eb;
     text-decoration: none;
 }
@@ -92,18 +92,18 @@ button {
     cursor: pointer;
 }
 
-
-.da-co-tk {
+.existing-account {
     margin-top: 16px;
     text-align: center;
     font-size: 13px;
 }
 
-.da-co-tk a {
+.existing-account a {
     color: #2563eb;
     text-decoration: none;
 }
 
-.loi {
+.error-message {
     color: red;
+    margin-left: 10px;
 }
